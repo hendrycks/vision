@@ -74,7 +74,7 @@ class VOCSegmentation(data.Dataset):
                  download=False,
                  transform=None,
                  target_transform=None):
-        self.root = root
+        self.root = os.path.expanduser(root)
         self.year = year
         self.url = DATASET_YEAR_DICT[year]['url']
         self.filename = DATASET_YEAR_DICT[year]['filename']
